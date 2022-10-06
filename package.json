@@ -1,0 +1,9 @@
+{
+  "name": "rockeatseat-nodejs",
+  "version": "1.0.0",
+  "description": "Primeiro projeto Node.js",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Carolina Vendramini",
+  "license": "MIT"
+}
