@@ -3,9 +3,21 @@ const http = require("http");
 http
     .createServer((request, response) => {
         response.writeHead(200, { 'Content-Type': 'text/plain' });
-        response.write(JSON.stringify({
-            message: "retornando em JSON"
+
+        if (request.url === '/produto') {
+            response.end(JSON.stringify({
+                message: "Rota de produto"
+            }));
+        }
+
+        if (request.url === '/usuarios') {
+            response.end(JSON.stringify({
+                message: "Rota de usuário"
+            }));
+        }
+
+        response.end(JSON.stringify({
+            message: "End?"
         }));
-        response.end();
     })
     .listen(4001, () => console.log("Servidor rodando na porta 4001"));
