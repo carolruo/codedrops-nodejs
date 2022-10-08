@@ -31,16 +31,20 @@ app.put("/products/:id", (request, response) => {
     const { id } = request.params;
     const { name, price } = request.body;
     const productIndex = products.findIndex(product => product.id === id);
-    console.log("antes ", products[productIndex]);
-
     products[productIndex] = {
         ...products[productIndex],
         name,
         price
     };
-    console.log("depois ", products[productIndex]);
-
     return response.json({ message: "Produto alterado com sucesso" });
+});
+
+app.delete("/products/:id", (request, response) => {
+    const { id } = request.params;
+    const productIndex = products.findIndex(product => product.id === id);
+    products.splice(productIndex, 1);
+
+    return response.json({ message: "Produto deletado com sucesso" });
 });
 
 app.listen(4002, () => console.log("Servidor rodando na porta 4002"));
