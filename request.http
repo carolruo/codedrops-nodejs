@@ -1,0 +1,25 @@
+###
+POST http://localhost:4002/products 
+content-type: application/json
+
+{
+    "name" : "Tigela",
+    "price" : "3500"
+}
+
+###
+GET  http://localhost:4002/products 
+content-type: application/json
+
+###
+PUT http://localhost:4002/products 
+content-type: application/json
+
+{
+    "name" : "pc",
+    "price" : "3500"
+}
+
+###
+DELETE http://localhost:4002/products/f4c9938a-b5d2-4745-aa04-4a07d17a850d
+content-type: application/json
