@@ -5,6 +5,7 @@ Aprendi a construir um servidor e mapear as URLs utilizando os módulos nativos 
 Utilizei o Express Framework para criar as rotas da aplicação, também fiz uso de pacotes nativos do Node.js como o crypto e o file system para gravação e leitura de dados.
 
 Endpoints:
+
 GET -> Busca de dados geral e busca de um dado específico passando um param de id pela URL
 
 POST -> Criação da rota de inserção de dados
